@@ -1,4 +1,5 @@
 import java.util.Collections.swap
+import kotlin.*
 
 /*
 *
@@ -8,21 +9,19 @@ import java.util.Collections.swap
 * */
 
 fun main(args: Array<String>) {
-    fun main() {
-        fun mySort(arr: List<Int>): List<Int> {
+        fun mySort(list: List<Int>): List<Int> {
             var swappedElements : Boolean
             do {
                 swappedElements = false
-                for (i in 0..arr.size - 2){
-                    if (arr[i] > arr[i + 1]){
-                        swap(arr, i, i + 1)
+                for (i in 0..list.size - 2){
+                    if (list[i] > list[i + 1]){
+                        swap(list, i, i + 1)
                         swappedElements = true
                     }
                 }
             } while (swappedElements)
-            for(i in arr) println(i)
-            return arr
+            for(i in list) println(i)
+            return list
         }
         mySort(listOf(1,10,4,6,15))
     }
-}
